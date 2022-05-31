@@ -19,7 +19,7 @@ app.get('/api/tweet/:id', (req, res) => {
 });
 
 app.get('/api/tweet/search/:keyword', (req, res) => {
-    client.tweets.tweetsRecentSearch({ query: req.params["keyword"], max_results: 50 }).then(
+    client.tweets.tweetsRecentSearch({ query: req.params["keyword"], max_results: 10 }).then(
         result => {
             res.send(result);
         }
