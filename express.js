@@ -7,7 +7,7 @@ const client = new twit.Client("AAAAAAAAAAAAAAAAAAAAAC2mcgEAAAAA71xIZ%2BvGM4KobH
 
 const app = express();
 
-app.use(cors());
+app.use(cors({ origin: '*' }));
 
 // this function gets author of tweet based on tweet ID.
 app.get('/api/tweet/:id', (req, res) => {
