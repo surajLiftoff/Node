@@ -2,14 +2,17 @@
     "name": "express",
     "version": "1.0.0",
     "description": "",
-    "main": "server.js",
+    "main": "express.js",
     "scripts": {
-        "start": "node server.js",
+        "start": "node express.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "express": "^4.18.1"
+        "cors": "^2.8.5",
+        "express": "^4.18.1",
+        "twit": "^2.2.11",
+        "twitter-api-sdk": "^1.0.6"
     }
 }
