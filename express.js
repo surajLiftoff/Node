@@ -36,9 +36,5 @@ app.get('/api/tweet/search/:keyword', (req, res) => {
 
 // app.listen(3000, () => console.log('Server running'));
 
-const PORT = process.env.PORT || 8080;
-
-app.listen(PORT, () => {
-    console.log(`App listening on port ${PORT}`);
-    console.log('Press Ctrl+C to quit.');
-});
+app.listen(process.env.PORT || 3010,
+    () => console.log("Server is running..."));
