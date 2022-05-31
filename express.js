@@ -10,10 +10,10 @@ const app = express();
 app.use(cors());
 
 // this function gets author of tweet based on tweet ID..
-app.get('/api/tweets/', (req, res) => {
-    client.tweets.findTweetsById({ ids: req.headers['ids'].split(','), expansions: ["author_id", "attachments.media_keys"], "media.fields": ["url", "preview_image_url", "type"] }).then(
-        tweets => {
-            res.send(tweets);
+app.get('/api/tweet/:id', (req, res) => {
+    client.tweets.findTweetById(req.params["id"], { expansions: ["author_id", "attachments.media_keys"], "media.fields": ["url", "preview_image_url", "type"] }).then(
+        tweet => {
+            res.send(tweet);
         }
     );
 });
